@@ -1,0 +1,105 @@
+syntax = "proto3";
+
+package com.xiaomi.mis;
+
+option optimize_for = LITE_RUNTIME;
+
+option java_package = "com.xiaomi.mis";
+option java_outer_classname = "NearbyConnectFlow";
+
+message JoinApFrame {
+
+  enum FrameType {
+    UNKNOWN_FRAME_TYPE = 0;
+    REQUEST = 1;
+    HAND_SHAKE = 2;
+    RESPONSE = 3;
+    RESPONSE_ACK = 4;
+  }
+
+  FrameType type = 1;
+  // 一次热点连接请求id,每次request 都会变化
+  uint32 request_id = 2;
+  oneof frame {
+    RequestFrame request = 3;
+    HandShakeFrame handshake = 4;
+    ResponseFrame  response = 5;
+    ResponseAckFrame response_ack = 6;
+  }
+}
+
+// 一键热点请求
+message RequestFrame {
+  // format: (SPEC_VERSION_MAJOR << 8) | SPEC_VERSION_MINOR
+  bytes did = 1; // Device id
+  uint32 device_type = 2;
+  // name should be in utf-8 format.
+  string name = 3;
+  int64 timeout = 4;
+  bytes private_data = 5;
+}
+
+// Ap热点信息
+message ApInfo {
+  string ssid = 1;
+  string password = 2;
+  string server_ip = 3;
+  string server_ipv6 = 4;
+}
+
+// Station信息
+message StaInfo {
+  string client_ip = 1;
+  string client_ipv6 = 2;
+}
+
+message ResponseFrame {
+  // 0: accept, other: reject
+  int32 code = 1;
+  string code_description = 2;
+  ApInfo ap_info = 3;
+  string name = 4;
+  bytes private_data = 5;
+  bool is_confirm = 6;
+}
+
+message ResponseAckFrame {
+  // 0: accept, other: reject
+  int32 code = 1;
+  string code_description = 2;
+  StaInfo sta_info = 3;
+  bytes private_data = 4;
+}
+
+message HandShakeFrame {
+  enum MessageType {
+    PAIR = 0;
+  }
+
+  MessageType type = 2;
+
+  oneof pairMsg {
+    PairFourOne one = 3;
+    PairFourTwo two = 4;
+    PairFourThree three = 5;
+    PairFourFour four = 6;
+  }
+}
+
+message PairFourOne {
+  bytes sha256A= 1;
+}
+
+message PairFourTwo {
+  string Pb = 1;
+  string Nb = 2;
+}
+
+message PairFourThree {
+  string Pa = 1;
+  string Na = 2;
+}
+
+message PairFourFour {
+  bool finish = 1;
+}

@@ -1,0 +1,3 @@
+native_libs/libavcodec.so:                           ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, stripped
+native_libs/libffmpeg_mediametadataretriever_jni.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=a38bea15ff03712af7c9bbd272f7bd1ddcd0fcd4, stripped
+native_libs/libglassvisioncore.arcsoft.so:           ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=6ae612e2f2cee57aa8115707815b61aefb440b31, stripped

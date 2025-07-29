@@ -1,0 +1,175 @@
+syntax = "proto3";
+
+package com.xiaomi.mis.proxy_device;
+
+option java_package = "com.xiaomi.mis.proxy_device";
+option java_outer_classname = "ProxyCmdProto";
+
+message ProxyCmd {
+  enum Type {
+    START = 0x00;
+
+    AUTH = 0x01;
+    HEART_BEAT = 0x02;
+    PUBLISH_SPEC = 0x03;
+    PUBLISH_SPEC_RSP = 0x04;
+    REPORT_SPEC = 0x05;
+    SUB_DEV = 0x06;
+    SUB_DEV_RSP = 0x07;
+    UNSUB_DEV = 0x08;
+    UNSUB_DEV_RSP = 0x09;
+    NOTIFY_DEVICE_CHANGED = 0x0a;
+    GET_MIS_DATA_REQ = 0x0b;
+    GET_MIS_DATA_RSP = 0x0c;
+    MIP_DEVICE_INFO = 0x0d;
+    MIP_PACKET_BYTES = 0x0e;
+    INTERNAL_DATA = 0x0f;
+
+    END = 0xFF;
+  }
+
+  int32 id = 1;  // 消息id
+  Type type = 2;  // 消息类型
+  int32 version = 3;  // 设备间通信协议版本
+  string caller = 4;  // 控端包名
+
+  oneof Cmd {
+    Auth auth = 8;
+    HeartBeat heart_beat = 9;
+    PublishSpec publish_spec = 10;
+    PublishSpecRsp  publish_spec_rsp = 11;
+    ReportSpec report_spec = 12;
+    SubDev sub_dev = 13;
+    SubDevRsp sub_dev_rsp = 14;
+    UnSubDev unsub_dev = 15;
+    UnSubDevRsp unsub_dev_rsp = 16;
+    NotifyDeviceChanged notify_device_changed = 17;
+    GetMisDataReq get_data_req = 18;
+    GetMisDataRsp get_data_rsp = 19;
+    MipDeviceInfo mip_device_info = 20;
+    MipPacketBytes mip_packet_bytes = 21;
+    InternalData internal_data = 22;
+  }
+}
+
+enum Status {
+  SUCCESS  = 0;
+  FAIL = 1;
+}
+
+message PublishSpec {
+  string spec = 1;
+}
+
+message PublishSpecRsp {
+  string spec = 1;
+}
+
+message SubDev {
+  repeated string devType = 1;
+}
+
+message SubDevRsp {
+  Status status = 1;
+}
+
+message UnSubDev {
+}
+
+message UnSubDevRsp {
+  Status status = 1;
+}
+
+message ReportSpec {
+  string spec = 1;
+}
+
+message NotifyDeviceChanged {
+  string deviceJson = 1;
+}
+
+message HeartBeat {
+  int32 type = 1; // 0:default 1:req 2:rsp
+}
+
+message Auth {
+  string signature = 1;
+  string sessionId = 2;
+}
+
+enum RoleType {
+  UNKNOWN = 0x00;
+  CONTROLLER = 0x01;
+  CONTROLLEE = 0x02;
+}
+
+message MipPacketBytes {
+  RoleType role = 1;
+  bytes data = 2; // MipPacket ByteArray
+}
+
+message MipDeviceInfo {
+  int32 state = 1; // device online state
+  ProxyDeviceInfo proxy_device_info = 2;
+}
+
+message ProxyDeviceInfo {
+  bytes did = 1;
+  string model = 2;
+  string name = 3;
+  string uid = 4;
+  string vid = 5;
+  string pid = 6;
+  string fw_ver = 7;
+  string ddf_ver = 8;
+}
+
+enum MisDataTypeEnum {
+  START = 0x00;
+
+  MEDIA_IMAGE_BITMAP_BY_ID = 0x01;
+  CAR_MODEL_IMAGE_BITMAP_BY_TYPE = 0x02;
+
+  END = 0xff;
+}
+
+message GetMisDataReq {
+  MisDataTypeEnum type = 1;
+  oneof key {
+    int32 intKey = 2;
+    int64 longKey = 3;
+    float floatKey = 4;
+    double doubleKey = 5;
+    bool boolKey = 6;
+    string stringKey = 7;
+    bytes bytesKey = 8;
+  }
+}
+
+message GetMisDataRsp {
+  int32 code = 1;
+  oneof key {
+    int32 intKey = 2;
+    int64 longKey = 3;
+    float floatKey = 4;
+    double doubleKey = 5;
+    bool boolKey = 6;
+    string stringKey = 7;
+    bytes bytesKey = 8;
+  }
+  bytes data = 9;
+}
+
+enum InternalType {
+  INTERNAL_TYPE_UNKNOWN = 0;
+  INTERNAL_TYPE_MIP = 1;
+}
+
+/**
+ * Internal data.
+ * MIS 内部数据, 路由同步和消息转发使用, 不对SDK暴露
+ */
+message InternalData {
+  InternalType type = 1;
+  bytes data = 2;
+}
