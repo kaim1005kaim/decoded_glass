@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" package="com.xiaomi.superhexa" platformBuildVersionCode="35" platformBuildVersionName="15">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.xiaomi.permission.AUTH_SERVICE"/>
+    <permission android:name="com.xiaomi.superhexa.permission.ACCESS_MISHOW" android:protectionLevel="normal"/>
+    <uses-permission android:name="com.xiaomi.superhexa.permission.ACCESS_MISHOW"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:maxSdkVersion="30" android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:maxSdkVersion="30" android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" android:usesPermissionFlags="neverForLocation"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-feature android:name="android.hardware.location.gps"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+    <permission android:name="com.xiaomi.superhexa.STATE_READ"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-feature android:name="android.software.companion_device_setup" android:required="true"/>
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND"/>
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND"/>
+    <uses-permission android:name="android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE"/>
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.netease.cloudmusic.third.api.CMApiService"/>
+        </intent>
+        <package android:name="com.xiaomi.mi_connect_service"/>
+    </queries>
+    <uses-permission android:name="android.permission.MAINLINE_NETWORK_STACK"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <permission android:name="com.xiaomi.mishow.ACCESS_DEVICE_INFO" android:protectionLevel="normal"/>
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="com.miui.voiceassist.permission.ACCESS_GLOBAL_CONTENT_PROVIDER"/>
+    <uses-permission android:name="com.miui.voiceassist.permission.ACCESS_SIGNED_CONTENT_PROVIDER"/>
+    <uses-permission android:name="com.miui.voiceassist.permission.ACCESS_LINK_CONTENT_PROVIDER"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.xiaomi.mis.ipc.aidl.SPEC"/>
+    <uses-permission android:name="android.permission.REAL_GET_TASKS"/>
+    <permission android:name="com.xiaomi.superhexa.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.xiaomi.superhexa.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="com.xiaomi.passport.permission.PASSPORT_UI_CONTROLLER_SERVICE"/>
+    <permission android:name="com.xiaomi.superhexa.permission.MIPUSH_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.xiaomi.superhexa.permission.MIPUSH_RECEIVE"/>
+    <uses-permission android:name="miui.permission.powerkeeper.HIDDEN_MODE_PROVIDER"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="com.xiaomi.permission.BIND_CONTINUITY_SERVICE_INTERNAL"/>
+    <uses-permission android:name="com.xiaomi.permission.BIND_CONTINUITY_SERVICE"/>
+    <uses-permission android:name="com.mi.health.permission.DEFAULT_READ_DATA"/>
+    <uses-permission android:name="com.xiaomi.wearable.permission.DEFAULT_READ_DATA"/>
+    <uses-permission android:name="com.xiaomi.mi_connect_service.permission.MI_WEAR_CORE"/>
+    <uses-permission android:name="miui.permission.ACCESS_BLE_SETTINGS"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@mipmap/app_icon" android:label="@string/app_name" android:largeHeap="true" android:name="com.superhexa.supervision.app.SuperVisionApplication" android:requestLegacyExternalStorage="true" android:resizeableActivity="false" android:roundIcon="@mipmap/app_icon_round" android:supportsRtl="true" android:theme="@style/Theme.Kunming" android:usesCleartextTraffic="true">
+        <meta-data android:name="ScopedStorage" android:value="true"/>
+        <meta-data android:name="android.max_aspect" android:value="2.4"/>
+        <meta-data android:name="android.notch_support" android:value="true"/>
+        <meta-data android:name="notch.config" android:value="portrait|landscape"/>
+        <meta-data android:name="android.supports_size_changes" android:value="true"/>
+        <provider android:authorities="com.xiaomi.superhexa.shareFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/share_file_path"/>
+        </provider>
+        <provider android:authorities="com.xiaomi.superhexa.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="com.superhexa.supervision.startup.StartupInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <property android:name="miui.continuity.policy" android:value="5"/>
+        <activity android:configChanges="density|fontScale|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="true" android:launchMode="singleTop" android:name="com.superhexa.supervision.NavHostActivity" android:resizeableActivity="true" android:screenOrientation="userPortrait" android:taskAffinity="com.miui.mydemo" android:theme="@style/Theme.MainActivity" android:windowSoftInputMode="adjustResize">
+            <meta-data android:name="miui.continuity.policy" android:value="5"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.APP_BROWSER"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="miGlasses"/>
+                <data android:host="hlth.io.mi.com" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.xiaomi.passport.ui.page.AccountLoginActivity" android:screenOrientation="unspecified" android:theme="@style/PassportTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.tencent.bugly.beta.ui.BetaActivity" android:theme="@android:style/Theme.Translucent"/>
+        <provider android:authorities="com.xiaomi.superhexa.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tencent.bugly.beta.utils.BuglyFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <service android:name="com.superhexa.supervision.feature.miwearglasses.presentation.media.service.download.O95DownloadMediaFileService"/>
+        <service android:name="com.superhexa.supervision.feature.miwearglasses.presentation.media.service.process.VideoProcessService"/>
+        <service android:enabled="true" android:exported="true" android:name="com.superhexa.supervision.feature.miwearglasses.mishow.O95ConnectInfoService" android:permission="com.xiaomi.superhexa.permission.ACCESS_MISHOW">
+            <intent-filter>
+                <action android:name="com.xiaomi.superhexa.ACTION_INTERCONNECTION_MISHOW"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.superhexa.supervision.feature.device.presentation.baidu.BaiduJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:enabled="true" android:exported="false" android:name="com.superhexa.supervision.feature.device.presentation.baidu.BaiduWalkService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.superhexa.supervision.feature.device.presentation.baidu.RemoteKeepService" android:process=":remoteKeep"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.superhexa.supervision.feature.profile.presentation.feedback.log.FeedBackLogReceiver">
+            <intent-filter>
+                <action android:name="com.superhexa.supervision.ACTION_TASK_TRIGGER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="com.superhexa.supervision.feature.profile.presentation.feedback.log.SceneReproductionLogReceiver">
+            <intent-filter>
+                <action android:name="com.superhexa.supervision.ACTION_TASK_SCENE_TRIGGER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.mobile.auth.gatewayauth.LoginAuthActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.mobile.auth.gatewayauth.activity.AuthWebVeiwActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.cmic.sso.sdk.activity.LoginAuthActivity"/>
+        <activity android:name="com.xiaomi.account.openauth.AuthorizeActivity"/>
+        <service android:name="com.superhexa.supervision.feature.videoeditor.presentation.selector.services.DownloadMediaFileService"/>
+        <service android:exported="true" android:name="com.superhexa.supervision.feature.audioglasses.presentation.notifyspeech.service.NotifyService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.superhexa.supervision.feature.audioglasses.presentation.recording.service.RecordingService"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.superhexa.supervision.feature.xiaoai.presentation.streamDialog.StreamActivity" android:screenOrientation="userPortrait" android:theme="@style/Theme.FullActivity"/>
+        <service android:exported="false" android:foregroundServiceType="mediaPlayback" android:name="com.superhexa.supervision.feature.xiaoai.service.AiSpeechService"/>
+        <service android:exported="false" android:foregroundServiceType="mediaPlayback" android:name="com.superhexa.supervision.feature.xiaoai.service.InhibitionNotificationService"/>
+        <provider android:authorities="com.xiaomi.superhexa.StateProvider" android:exported="true" android:name="com.superhexa.supervision.feature.xiaoai.provider.StateProvider" android:permission="com.xiaomi.superhexa.STATE_READ"/>
+        <service android:exported="true" android:name="com.superhexa.supervision.feature.channel.presentation.newversion.companion.service.ConnectivityCompanionDeviceService" android:permission="android.permission.BIND_COMPANION_DEVICE_SERVICE">
+            <intent-filter>
+                <action android:name="android.companion.CompanionDeviceService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.superhexa.supervision.feature.channel.presentation.newversion.nearby.MMANearbyService">
+            <intent-filter>
+                <action android:name="com.xiaomi.mma.NearbyService"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTask" android:name="com.superhexa.music.qmusic.QMusicCallbackActivity" android:theme="@style/Theme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="glass" android:path="/qqmusiccallback" android:scheme="xiaomi"/>
+            </intent-filter>
+        </activity>
+        <service android:enabled="true" android:exported="true" android:name="com.xiaomi.mishow.service.O95MessageService" android:permission="com.xiaomi.mishow.ACCESS_DEVICE_INFO">
+            <intent-filter>
+                <action android:name="com.xiaomi.mishow.SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="com.xiaomi.algoprocessor.core.processor.server.ProcecssorService" android:process=":processor">
+            <intent-filter>
+                <action android:name="com.xiaomi.algo.ALGO_PROCESSOR_JPEG"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.algo.ALGO_PROCESSOR_VIDEO"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.superhexa.supervision.library.mipush.MiPushMessageReceiver">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <service android:exported="false" android:name="androidx.work.multiprocess.RemoteWorkManagerService"/>
+        <meta-data android:name="com.bumptech.glide.integration.webp.WebpGlideModule" android:value="GlideModule"/>
+        <provider android:authorities="com.xiaomi.superhexa.PassportUIInitProvider" android:exported="false" android:name="com.xiaomi.passport.ui.internal.PassportUIInitProvider"/>
+        <activity android:exported="false" android:name="com.xiaomi.passport.ui.internal.PickCountryCodeActivity" android:theme="@style/PassportTheme.NoActionBar"/>
+        <activity android:exported="false" android:label="" android:name="com.xiaomi.passport.ui.page.UserAvatarUpdateActivity" android:screenOrientation="portrait" android:theme="@style/TransparentCompat"/>
+        <provider android:authorities="com.xiaomi.superhexa.passport.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.xiaomi.passport.ui.settings.provider.PassportFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/passport_provider_file_paths"/>
+        </provider>
+        <activity android:exported="true" android:name="com.xiaomi.passport.ui.sns.WXEntryActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.xiaomi.passport.ui.internal.ConfirmCredentialActivity" android:theme="@style/PassportTheme.NoActionBar" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.xiaomi.account.action.XIAOMI_ACCOUNT_QUICK_LOGIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="@string/account_user_details" android:name="com.xiaomi.passport.ui.page.UserInfoActivity" android:theme="@style/PassportTheme.NoActionBar"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.xiaomi.passport.ui.internal.PassportJsbWebViewActivity" android:theme="@style/PassportTheme.NoActionBar"/>
+        <service android:exported="false" android:name="no.nordicsemi.android.support.v18.scanner.ScannerService"/>
+        <receiver android:exported="true" android:name="no.nordicsemi.android.support.v18.scanner.PendingIntentReceiver">
+            <intent-filter>
+                <action android:name="no.nordicsemi.android.support.v18.ACTION_FOUND"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="true" android:name="androidx.compose.ui.tooling.PreviewActivity"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:exported="false" android:name="com.xiaomi.passport.accountmanager.OwnAppXiaomiAccountAuthenticatorService">
+            <intent-filter>
+                <action android:name="com.xiaomi.accounts.AccountAuthenticator"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.xiaomi.account.service.AppAccountExchangeService" android:permission="com.xiaomi.permission.CLOUD_MANAGER">
+            <intent-filter>
+                <action android:name="com.xiaomi.account.action.BIND_ACCOUNT_EXCHANGE_SERVICE"/>
+            </intent-filter>
+        </service>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <activity android:name="com.tencent.bugly.beta.ui.BetaActiveAlertActivity"/>
+        <service android:exported="false" android:name="com.tencent.bugly.beta.tinker.TinkerResultService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <meta-data android:name="MIPUSH_SDK_VERSION_CODE" android:value="50602"/>
+        <meta-data android:name="MIPUSH_SDK_VERSION_NAME" android:value="5_6_2-C"/>
+        <service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice"/>
+        <service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice"/>
+        <service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler" android:permission="com.xiaomi.xmsf.permission.MIPUSH_RECEIVE"/>
+        <service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService"/>
+        <receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleInstance" android:name="com.xiaomi.mipush.sdk.NotificationClickedActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <meta-data android:name="supportStyle" android:value="scene|voip"/>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <service android:enabled="false" android:exported="false" android:name="com.xiaomi.wearable.core.MiWearCoreService">
+            <intent-filter>
+                <action android:name="com.xiaomi.superhexa.MiWearCoreService"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.xiaomi.continuity.sdk.VERSION_CODE" android:value="3002040"/>
+        <meta-data android:name="com.xiaomi.continuity.sdk.VERSION_NAME" android:value="3.2.040.10.0412183"/>
+        <provider android:authorities="com.xiaomi.superhexa.continuity-startup" android:exported="false" android:name="com.xiaomi.continuity.InitializationProvider"/>
+    </application>
+</manifest>
